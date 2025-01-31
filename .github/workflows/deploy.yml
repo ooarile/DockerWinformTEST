@@ -19,9 +19,7 @@ jobs:
         dotnet-version: '8.0.x'  # 사용 중인 .NET 버전
 
     - name: Build project
-      run: |
-        cd src  # 솔루션 파일이 있는 디렉토리로 이동
-        dotnet build DockerWinformTEST.sln --configuration Release
+      run: dotnet build DockerWinformTEST.sln --configuration Release
 
     - name: Deploy
       shell: cmd
@@ -30,7 +28,7 @@ jobs:
         set FTP_HOST=localhost
         set FTP_USER=test
         set FTP_PASS=1234
-        set LOCAL_PATH=src\DockerWinformTEST\bin\Release
+        set LOCAL_PATH=DockerWinformTEST\bin\Release
 
         echo open %FTP_HOST%> ftp.txt
         echo %FTP_USER%>> ftp.txt
