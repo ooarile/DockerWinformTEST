@@ -27,7 +27,7 @@ jobs:
       shell: cmd
       run: |
         @echo off
-        set FTP_HOST=127.0.0.1
+        set FTP_HOST=175.113.121.192
         set FTP_USER=test
         set FTP_PASS=1234
         set LOCAL_PATH=DockerWinformTEST\DockerWinformTEST\bin\Release
