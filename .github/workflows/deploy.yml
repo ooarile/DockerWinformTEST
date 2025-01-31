@@ -1,3 +1,4 @@
+.github/workflows/deploy.yml
 name: Build and Deploy
 
 on:
@@ -35,6 +36,7 @@ jobs:
         echo open %FTP_HOST%> ftp.txt
         echo %FTP_USER%>> ftp.txt
         echo %FTP_PASS%>> ftp.txt
+        echo cd htdocs>> ftp.txt
         echo mput %LOCAL_PATH%\*>> ftp.txt
         echo bye>> ftp.txt
 
